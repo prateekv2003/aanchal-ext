@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Paraent Control Extension",
+  "version": "0.0.1",
+  "description": "A chrome extension to block websites for kids",
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "Content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "Popup.html",
+    "default_title": "Procrastination Blocker"
+  },
+  "permissions": [
+    "https://pokeapi.co",
+    "https://cs-dj.workspaceomkarb.repl.co"
+  ]
+}
